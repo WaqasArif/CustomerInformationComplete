@@ -96,6 +96,7 @@ public class ListActivity extends AppCompatActivity implements View.OnClickListe
             TextView register = dialog.findViewById(R.id.regNoEt);
             TextView entry = dialog.findViewById(R.id.entryNoEt);
             TextView description = dialog.findViewById(R.id.descEt);
+           // TextView description = dialog.findViewById(R.id.descEt);
 
 
             Button delete = dialog.findViewById(R.id.ID_delbtn);
