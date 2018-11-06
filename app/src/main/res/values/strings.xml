@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CustomerInformation</string>
+    <string name="view">Search</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="customer_num">Customer Number</string>
+    <string name="customer_reg">Register No</string>
+    <string name="customer_desc">Description</string>
+    <string name="add_customer">Add Customer</string>
+    <string name="view_customer">View All</string>
+    <string name="view_customers">All Customers</string>
+    <string name="new_customer">Add New</string>
+    <string name="customer_entry">Entry No</string>
+    <string name="delete">Delete</string>
+    <string name="sureD">Are you sure to delete this Entry?</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+</resources>
