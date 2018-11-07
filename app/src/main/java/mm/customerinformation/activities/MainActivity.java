@@ -2,9 +2,10 @@ package mm.customerinformation.activities;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -31,31 +32,39 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        db=new DatabaseHandler(this);
+        try {
+            db=new DatabaseHandler(this);
 
 
-        nametxt=findViewById(R.id.nameEt);
-        phonetxt=findViewById(R.id.phoneEt);
-        regtxt=findViewById(R.id.regNoEt);
-        desctxt=findViewById(R.id.descEt);
-        entrytxt=findViewById(R.id.entryNoEt);
 
-        recordsTv=findViewById(R.id.count);
+            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
-        searchBtn=findViewById(R.id.seeAll);
-        viewBtn=findViewById(R.id.viewCust);
-        addBtn=findViewById(R.id.addCust);
+            nametxt=findViewById(R.id.nameEt);
+            phonetxt=findViewById(R.id.phoneEt);
+            regtxt=findViewById(R.id.regNoEt);
+            desctxt=findViewById(R.id.descEt);
+            entrytxt=findViewById(R.id.entryNoEt);
 
-        allCust=db.LoadCustomers("");
+            recordsTv=findViewById(R.id.count);
 
-        if (!allCust.isEmpty()){
-            int s=allCust.size();
-            recordsTv.setText("Records : "+ s);
-            recordsTv.setTextColor(getResources().getColor(R.color.white));
-        }else {
-            recordsTv.setText("No Record Found!");
-            recordsTv.setTextColor(getResources().getColor(R.color.red));
+            searchBtn=findViewById(R.id.seeAll);
+            viewBtn=findViewById(R.id.viewCust);
+            addBtn=findViewById(R.id.addCust);
+
+            allCust=db.LoadCustomers("");
+
+            if (!allCust.isEmpty()){
+                int s=allCust.size();
+                recordsTv.setText("Records : "+ s);
+                recordsTv.setTextColor(getResources().getColor(R.color.white));
+            }else {
+                recordsTv.setText("No Record Found!");
+                recordsTv.setTextColor(getResources().getColor(R.color.red));
+            }
+        }catch (Exception ignored){
+
         }
+
 
         searchBtn.setOnClickListener(this);
         viewBtn.setOnClickListener(this);
@@ -133,6 +142,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onResume(){
         super.onResume();
@@ -152,4 +162,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
     }
+
 }

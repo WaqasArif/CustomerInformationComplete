@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".activities.PinActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:text="@string/enter_pin"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="100dp"
+        android:id="@+id/tv"
+        />
+
+    <EditText
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tv"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/edittext_xml"
+        android:layout_marginTop="10dp"
+        android:inputType="numberPassword"
+        android:id="@+id/pinMain"
+        android:maxLength="4"
+        android:textColor="@color/black"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:text="@string/re_enter_pin"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv1"
+        android:layout_below="@+id/pinMain"
+        android:padding="5dp"
+        />
+
+    <EditText
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tv1"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/edittext_xml"
+        android:layout_marginTop="10dp"
+        android:inputType="numberPassword"
+        android:id="@+id/pinMain2"
+        android:maxLength="4"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        />
+
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:text="@string/save"
+        android:background="@drawable/btn_skip_normal"
+        android:id="@+id/addCust"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:layout_below="@+id/pinMain2"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        />
+</RelativeLayout>

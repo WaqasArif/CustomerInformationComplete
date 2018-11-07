@@ -78,6 +78,7 @@ public class ListActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
+
     @SuppressLint("SetTextI18n")
     private void showDialogN(final int position) {
         try {

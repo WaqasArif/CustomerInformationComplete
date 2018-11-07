@@ -14,4 +14,7 @@
     <string name="sureD">Are you sure to delete this Entry?</string>
     <string name="yes">Yes</string>
     <string name="cancel">Cancel</string>
+    <string name="enter_pin">Enter Pin :</string>
+    <string name="re_enter_pin">Re-enter Pin :</string>
+    <string name="save">Confirm</string>
 </resources>
