@@ -51,6 +51,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             viewBtn=findViewById(R.id.viewCust);
             addBtn=findViewById(R.id.addCust);
 
+
+            // hello this is my first change
+
             allCust=db.LoadCustomers("");
 
             if (!allCust.isEmpty()){
