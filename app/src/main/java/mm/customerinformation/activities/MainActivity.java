@@ -45,6 +45,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             desctxt=findViewById(R.id.descEt);
             entrytxt=findViewById(R.id.entryNoEt);
 
+            //hi
+
+
             recordsTv=findViewById(R.id.count);
 
             searchBtn=findViewById(R.id.seeAll);
